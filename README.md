@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rick & Morty Explorer
 
-## Getting Started
+## Описание проекта
+Rick & Morty Explorer — это веб-приложение для поиска и просмотра персонажей, локаций и эпизодов вселенной «Rick and Morty».  
+Проект построен на **Next.js 15 (App Router)** с использованием архитектурного подхода **Feature-Sliced Design (FSD)** и серверных компонентов для высокой производительности и SEO-оптимизации.
 
-First, run the development server:
+---
 
+## Установка и запуск
+
+### 1. Клонирование репозитория
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/username/rick-and-morty-explorer.git
+cd rick-and-morty-explorer
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Установка зависимостей
+```bash
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Запуск в режиме разработки
+```bash
+yarn dev
+```
+Приложение будет доступно по адресу: http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Сборка для продакшена
+```bash
+yarn build
+yarn start
+```
 
-## Learn More
+### Процесс проектирования и разработки
 
-To learn more about Next.js, take a look at the following resources:
+1. Планирование
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Выбор архитектуры FSD для лучшей модульности и масштабируемости.
+- Использование серверных компонентов для быстрой загрузки и SEO.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Архитектура проекта
 
-## Deploy on Vercel
+- app/ – маршруты и точки входа (App Router).
+- entities/ – модули для персонажей, эпизодов, локаций.
+- shared/ – общие UI-компоненты, типы, утилиты.
+- Все страницы являются серверными по умолчанию.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. UI и стилизация
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Интерфейс выполнен в стиле мультсериала «Rick and Morty».
+- Используется TailwindCSS для быстрой верстки (опционально возможны CSS Modules).
+
+4. Работа с данными
+
+- Все запросы выполняются на сервере с помощью встроенного fetch в моделях.
+- Используется строгая типизация с TypeScript.
+
+### Уникальные подходы и методологии
+- Feature-Sliced Design (FSD) — организация кода по функционалу, а не по слоям.
+- Server Components — снижение размера клиентского бандла и ускорение загрузки.
+- TypeScript — строгая типизация для безопасности и стабильности.
+- Фирменный UI — оформление в духе вселенной сериала.
+
+### Компромиссы при разработке
+
+- FSD вместо стандартной структуры Next.js
+  - Плюсы: лучше масштабируемость, модульность.
+  - Минусы: более высокая сложность на старте.
+
+- Только серверные компоненты
+  - Плюсы: меньше клиентского кода, выше производительность.
+  - Минусы: сложнее реализовывать интерактивные элементы, нужны изолированные клиентские компоненты.
+
+- TailwindCSS вместо CSS Modules
+  - Плюсы: быстрая разработка, консистентность.
+  - Минусы: классы могут быть менее читаемыми для новичков.
+
+### Известные ошибки и проблемы
+
+- Нет полноценной обработки ошибок API — при недоступности API может отображаться пустой экран.
+- Ограниченная интерактивность — некоторые элементы требуют перевода на клиентские компоненты.
+- Ограниченная адаптация под слабые устройства (будет улучшено в будущем).
+
+### Почему выбран данный стек
+
+- Next.js 15 (App Router) — современный фреймворк для SSR и SSG, оптимизированный для высокой производительности.
+- FSD — модульная архитектура, упрощающая масштабирование и поддержку.
+- TypeScript — уменьшает количество ошибок на этапе разработки.
+- TailwindCSS — ускоряет стилизацию без потери гибкости.

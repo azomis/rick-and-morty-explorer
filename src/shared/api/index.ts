@@ -1,0 +1,1 @@
+export { rickAndMortyFetch } from './rickAndMortyApi';
