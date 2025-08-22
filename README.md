@@ -23,7 +23,7 @@ A modern, responsive web application built with Next.js that allows users to exp
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/AzOmisa/rick-and-morty-explorer.git
+   git clone https://github.com/azomis/rick-and-morty-explorer.git
    cd rick-and-morty-explorer
    ```
 
@@ -235,6 +235,6 @@ This project is for educational purposes and uses the public Rick and Morty API.
 
 ---
 
-**Built with ❤️ and lots of ⚡ by AzOmisa**
+**Built with ❤️ and lots of ⚡ by azomis**
 
 *"Wubba Lubba Dub Dub!"* - Rick Sanchez

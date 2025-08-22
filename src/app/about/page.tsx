@@ -85,7 +85,7 @@ export default function AboutPage() {
               </a>
 
               <a
-                href="https://github.com/AzOmisa"
+                href="https://github.com/azomis"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center justify-center gap-2 sm:gap-3 bg-gray-800 text-white px-3 sm:px-4 md:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base md:text-lg border-2 sm:border-4 border-yellow-400 shadow-lg hover:bg-gray-900 hover:scale-105 hover:shadow-[0_0_20px_rgba(100,100,100,0.5)] transition-all duration-300 sm:col-span-2 md:col-span-1"
